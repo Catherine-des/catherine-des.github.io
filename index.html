@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Park</title>
+
+  <!-- Link to generated CSS file -->
+  <link href="./css/output.css" rel="stylesheet" />
+  <script src="index.js"></script>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter',Times New Roman;
+      background-color: #6410d9;
+      margin: 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-sm relative">
+
+    <!-- Mobile Menu Button -->
+    <Button class="md:hidden block" id="menu-btn">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Navigation -->
+       <div class="flex justify-center flex-1">
+          <div class="hidden md:flex space-x-14">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#dorcs" class="nav-link font-bold">Snake Park</a>
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#resources" class="nav-link">Resources</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+        </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-orange-200 rounded-3xl mx-6 mt-8 p-10 text-center min-h-screen flex flex-col justify-center items-center" data-aos="fade-up">
+  <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4">
+    We sought your Leisure Time
+  </h2>
+  <p class="text-black mb-10 max-w-xl">
+    Our team of experts, will make the walk in the park very seamless.
+  </p>
+  <button class="bg-teal-800 text-white px-6 py-2 rounded-full transition-transform hover:scale-105 hover:bg-teal-700">
+    Get Started
+  </button>
+</section>
+
+
+  <!-- How It Works -->
+  <section class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center p-10" data-aos="fade-up">
+    <div>
+      <h3 class="text-5xl font-bold uppercase text-gray-700">How it Works</h3>
+      <h2 class="text-4xl font-bold my-2">You just visit our park to meet different types of snakes</h2>
+      <p class="text-gray-600 mb-4">Once inside our team will guide through sections.</p>
+      <button class="bg-teal-800 text-white px-5 py-2 rounded-full transition-transform hover:scale-105 hover:bg-teal-700">Talk to a representative</button>
+    </div>
+    <div class="rounded-2xl bg-teal-900 h-60 flex items-center justify-center text-white text-lg">
+      <img src="https://th.bing.com/th/id/OIF.CojQjCgxVSiDhhaXcfFfxg?rs=1&pid=ImgDetMain" alt="Medical Appointment Icon" class="w-900 h-60" />
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="max-w-6xl mx-auto px-6 p-10" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-6">Visit our Park today</h2>
+    <p class="text-3xl text-center text-gray-600 mb-10">Our Park is open throughout the week.</p>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-orange-50 p-6 rounded-3xl shadow-sm">
+        <h3 class="text-4xl text-lg font-semibold">Get in touch with our representatives</h3>
+        <p class="text-gray-600 my-2">Our guides stands between you and learning a new species of snake.</p>
+        <button class="text-teal-800 font-semibold mt-2 hover:underline">Learn More</button>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="text-lg font-semibold">Make a call directly to the office for any inquiries</h3>
+        <p class="text-gray-600 my-2">You can get an instant assistance by linking directly to our office.</p>
+        <button class="text-teal-800 font-semibold mt-2 hover:underline">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS & Mobile Menu JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+      menu.classList.toggle('flex-col');
+      menu.classList.toggle('absolute');
+      menu.classList.toggle('top-16');
+      menu.classList.toggle('right-6');
+      menu.classList.toggle('bg-white');
+      menu.classList.toggle('shadow-md');
+      menu.classList.toggle('rounded');
+      menu.classList.toggle('p-4');
+    });
+  </script>
+
+  <section class="px-6 py-10 bg-gray-50">
+  <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+    
+    <!-- Heading -->
+    <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 whitespace-nowrap">
+      What Our Clients Are Saying
+    </h3>
+
+    <!-- Sliding Testimonials (replace with actual slider logic or component) -->
+    <div class="flex-1 overflow-hidden">
+      <div class="flex gap-6 animate-slide whitespace-nowrap">
+        <!-- Testimonial 1 -->
+        <div class="bg-blue-200 rounded-2xl p-6 shadow">
+          <p class="text-gray-600">"Amazing services!"</p>
+          <span class="text-sm font-semibold text-teal-800">— Bianca D.</span>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-green-200 rounded-2xl p-6 shadow">
+          <p class="text-gray-600">"I was happy to see different species of snakes."</p>
+          <span class="text-sm font-semibold text-teal-800">— Mike S.</span>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-green-200 rounded-2xl p-6 shadow">
+          <p class="text-gray-600">"Wow i could imagine meeting a very big snake in my life."</p>
+          <span class="text-sm font-semibold text-teal-800">— Purity S.</span>
+        </div>
+
+        <!-- Add more testimonials here -->
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+    
+    
+      <!-- Partners Section -->
+<section class="bg-white py-10 p-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-5xl font-bold mb-4">Our Partners</h2>
+      
+      <div class="relative">
+        <!-- Scroll buttons -->
+        <button onclick="scrollPartners(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 shadow rounded-full">
+          &#8592;
+        </button>
+        <button onclick="scrollPartners(1)" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 shadow rounded-full">
+          &#8594;
+        </button>
+        
+        <!-- Scrollable partner logos -->
+        <div id="partnerSlider" class="flex overflow-x-auto space-x-10 scrollbar-hide scroll-smooth py-4">
+          <img src="https://th.bing.com/th/id/OIP.QaNSBGJDAQaawi3OtRWwdAAAAA?w=230&h=290&rs=1&pid=ImgDetMain" class="h-20 object-contain">
+          <img src="https://th.bing.com/th/id/OIP.PptVOe4SQgD9W9lNh2vMQQHaEK?rs=1&pid=ImgDetMain" class="h-20 object-contain">
+          <img src="https://th.bing.com/th/id/OIP.E9pMJx3jsAJwpgd3jkBxwgAAAA?pid=ImgDet&w=178&h=178&c=7&dpr=1.5" class="h-20 object-contain">
+          <img src="https://th.bing.com/th/id/OIP.9ztGr0A0tjvEvyqFrfB3ZwHaHa?pid=ImgDet&w=178&h=178&c=7&dpr=1.5" class="h-20 object-contain">
+          <img src="https://mkte.co.ke/wp-content/uploads/2023/09/Kenya_Tourism_Board_New_Logo1.jpg" class="h-20 object-contain">
+          <img src="https://th.bing.com/th/id/R.e5b72c6ec1c75a7bb86a8b1d9b780409?rik=gl%2bKHrJrIj99Qw&riu=http%3a%2f%2fwww.soralo.org%2fwp-content%2fuploads%2f2019%2f09%2fkwca-logo.png&ehk=idKaH%2ffik2ZWKKMKsp3v%2bZ%2bgNn5csAKKbjTvtJMYSEw%3d&risl=&pid=ImgRaw&r=0" class="h-20 object-contain">
+          <img src="https://th.bing.com/th/id/R.b49b0b35797f377d2a25260503275476?rik=RzTIZQ8USzzq4Q&riu=http%3a%2f%2frootedinhope.org%2fwp-content%2fuploads%2f2013%2f09%2flogo-kws-150x115.png&ehk=51MEMsBWx1no0S2rEojx8t1m9hQPRkvdoNjmSIOmnY4%3d&risl=&pid=ImgRaw&r=0" class="h-20 object-contain">
+          <img src="https://th.bing.com/th/id/OIP.5PhGd1sp5MLH7BnFZgXdGAHaGu?pid=ImgDet&w=178&h=161&c=7&dpr=1.5" class="h-20 object-contain">
+            <img src="https://th.bing.com/th/id/OIP.rSdpy-75GG6g7NzrIpB45gAAAA?rs=1&pid=ImgDetMain" class="h-20 object-contain"> 
+          <!-- Add more logos as needed -->
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- JS to handle scroll -->
+  <script>
+    function scrollPartners(direction) {
+      const slider = document.getElementById("partnerSlider");
+      const scrollAmount = 150;
+      slider.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+  
+  <!-- Optional: Hide scrollbar with Tailwind -->
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+    
+      <!-- Resources Section -->
+      <section>
+        <h2 class="text-3xl font-bold mb-2">Get to learn more about us</h2>
+        <p class="text-gray-600 mb-6 max-w-xl">Get insights on different types snakes.</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-green-200 rounded-2xl p-6 shadow space-y-4">
+            <h4 class="text-xl font-semibold">Books and journals</h4>
+            <p>Learn about different species of snakes through learning materials.</p>
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold">Explore</button>
+          </div>
+          <div class="bg-green-200 rounded-2xl p-6 shadow space-y-4">
+            <h4 class="text-xl font-semibold">Youtube videos</h4>
+            <p>Watch youtube to get more information on snakes.</p>
+            <button class="bg-teal-400 hover:bg-teal-500 text-white px-4 py-2 rounded-lg font-semibold">Explore</button>
+          </div>
+          <div class="bg-green-200 rounded-2xl p-6 shadow space-y-4">
+            <h4 class="text-xl font-semibold">Seminars</h4>
+            <p>Visit our seminars to learn more from our experts.</p>
+            <button class="bg-pink-300 hover:bg-pink-400 text-white px-4 py-2 rounded-lg font-semibold">Explore</button>
+          </div>
+        </div>
+      </section>
+    
+
+  <!-- FAQ Section -->
+<section class="max-w-6xl mx-auto mt-20">
+    <h2 class="text-3xl font-bold mb-2">Frequently<br/>Asked Questions</h2>
+    <p class="text-gray-600 max-w-md mb-6">
+      Find answers to common questions about Snakes.
+    </p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- FAQ Illustration -->
+      <div class="bg-orange-100 rounded-2xl flex justify-center items-center p-10">
+        <img src="https://th.bing.com/th/id/OIF.WLkolU4ZzChtCrkRQXzL1w?rs=1&pid=ImgDetMain" class="w-1000 h-50" />
+      </div>
+  
+      <!-- FAQ Items -->
+      <div class="space-y-4">
+        <!-- FAQ Item -->
+        <div class="bg-green-200 p-4 rounded-xl shadow cursor-pointer" onclick="toggleFAQ(this)">
+          <div class="flex justify-between items-center">
+            <span class="font-medium">Are the snakes poisonous?</span>
+            <span class="toggle-icon text-xl">+</span>
+          </div>
+          <div class="faq-answer hidden mt-2 text-gray-600">
+            The snake are not poisonous since the venom already been removed.
+          </div>
+        </div>
+  
+        <div class="bg-green-200 p-4 rounded-xl shadow cursor-pointer" onclick="toggleFAQ(this)">
+          <div class="flex justify-between items-center">
+            <span class="font-medium">Which day is most convinient to visit the Park?</span>
+            <span class="toggle-icon text-xl">+</span>
+          </div>
+          <div class="faq-answer hidden mt-2 text-gray-600">
+            We are open daily from 9.00am to 5pm, and each is convinient.
+          </div>
+        </div>
+  
+        <div class="bg-green-200 p-4 rounded-xl shadow cursor-pointer" onclick="toggleFAQ(this)">
+          <div class="flex justify-between items-center">
+            <span class="font-medium">What types of food does the snakes feed on?</span>
+            <span class="toggle-icon text-xl">+</span>
+          </div>
+          <div class="faq-answer hidden mt-2 text-gray-600">
+            Most snakes eat a variety of small-to-medium-sized prey animals, including: birds, fish, frogs, mice, rats, lizards, earthworms, slugs, and, as noted, various eggs..
+          </div>
+        </div>
+  
+        <!-- Add more FAQ items as needed -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- Accordion Script -->
+  <script>
+    function toggleFAQ(element) {
+      const answer = element.querySelector('.faq-answer');
+      const icon = element.querySelector('.toggle-icon');
+      const isVisible = !answer.classList.contains('hidden');
+  
+      // Collapse all answers
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+      document.querySelectorAll('.toggle-icon').forEach(i => i.textContent = '+');
+  
+      // Toggle current one
+      if (!isVisible) {
+        answer.classList.remove('hidden');
+        icon.textContent = '−';
+      }
+    }
+
+
+  </script>
+  <!-- Contact Section -->
+  <section class="max-w-6xl mx-auto text-center">
+    <p class="text-6x1 uppercase tracking-wide text-gray-500 mb-2">Get in Touch</p>
+    <h2 class="text-5xl font-bold mb-4">We’re Here to Support You</h2>
+    <p class="text-2xl font-bold mb-4">
+      Whether you have questions, need help getting started, or want to learn more — reach out anytime.
+    </p>
+    <div class="grid md:grid-cols-2 gap-8 text-left">
+      <!-- Contact Info -->
+      <div class="bg-yellow-400 p-6 rounded-2xl shadow space-y-4">
+        <h3 class="text-xl font-semibold">Contact Details:</h3>
+        <p><strong>Email:</strong> bianca23@gmail.com</p>
+        <p><strong>Phone:</strong> +254 785493486</p>
+        <p><strong>Address:</strong> Parkroad Court</p>
+        <div class="flex gap-4 mt-4">
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/linkedin.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/instagram-new.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/facebook-new.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/whatsapp.png"/></a>
+        </div>
+        <p class="text-sm mt-4 text-gray-500">We typically respond within 12 hours.</p>
+      </div>
+      <!-- Contact Form -->
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f8;
+      padding: 40px;
+    }
+
+    .contact-form {
+      background-color: #10dd40; /* brown */
+      padding: 25px 40px;
+      margin: auto;
+      max-width: 500px;
+      border-radius: 12px; /* Rounded corners */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      color: white;
+}
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .send-button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #39117a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #8d1569;
+    }
+
+    #message {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+<div class="contact-form">
+  <h2>Send Us a Message</h2>
+  <form id="contactForm">
+    
+    <label for="email">Email:</label>
+    <input id="email" type="email" placeholder="Enter your email" required />
+
+       <label for="messageBox">Message:</label>
+    <textarea id="messageBox" placeholder="Enter your message" required></textarea>
+    
+
+
+    <button class="send-button" type="button" onclick="sendMessage()">Send</button>
+  </form>
+  <p id="message"></p>
+</div>
+
+<script>
+function sendMessage() {
+  const email = document.getElementById("email").value.trim();
+  const messageBox = document.getElementById("messageBox").value.trim();
+  const messageElement = document.getElementById("message");
+
+  if (!email || !messageBox) {
+    messageElement.style.color = "red";
+    messageElement.innerText = "Please fill out all fields.";
+    messageElement.style.opacity = 1;
+
+    setTimeout(() => {
+      messageElement.style.opacity = 0;
+    }, 3000);
+
+    return;
+  }
+
+  messageElement.style.color = "blue";
+  messageElement.style.fontSize = "10px";
+  messageElement.style.fontStyle = "italic";
+  messageElement.innerText = "Message sent successfully. We will get back to you!";
+  messageElement.style.opacity = 1;
+
+  document.getElementById("contactForm").reset();
+
+  setTimeout(() => {
+    messageElement.style.opacity = 0;
+  }, 3000);
+}
+</script>
+
+
+
+  <!-- Footer Section -->
+  <footer class="bg-white py-10 mt-10">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+      <!-- Footer Links -->
+      <div class="space-y-4">
+        <h4 class="font-bold text-lg">Snake Park</h4>
+        <div class="grid grid-cols-2 gap-4 text-sm">
+          <ul class="space-y-1">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul class="space-y-1">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <p class="text-xs text-gray-400 mt-4">© [2035] Snake Park. All Rights Reserved.</p>
+      </div>
+      <!-- CTA Box -->
+      <div class="bg-cyan-900 text-white p-6 rounded-2xl flex flex-col justify-right items-center">
+        <h4 class="text-2xl font-bold leading-snug">Find Support, Guidance, and Balance.</h4>
+        <button class="bg-white text-cyan-900 font-semibold rounded-full mt-6 px-6 py-2 hover:bg-gray-100">
+          Find Support Now
+        </button>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
